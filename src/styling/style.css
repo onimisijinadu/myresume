@@ -1,0 +1,265 @@
+/* hero/ Header wrapper */
+.header {
+  position: relative;
+  width: 100%;
+  /* let content dictate height, but ensure at least full viewport */
+  min-height: 100vh;
+  background: url("scr/assests/background.jpg") center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+/* dark overlay */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+/* make all direct children sit above overlay  */
+.header > * {
+  position: relative;
+  z-index: 1;
+}
+/* Header Navbar (desktop + mobile */
+.Header-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+/* logo + name */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.75rem;
+}
+.Devname {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0px;
+  text-shadow: 2px 2px 0px black;
+}
+.white {
+  color: white;
+}
+.purple {
+  color: rgb(58, 39, 128);
+}
+/* desktop nav links */
+.navlinks {
+  display: flex;
+  gap: 1.5rem;
+}
+.navlinks a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #000;
+  transition: color 0.2s ease;
+}
+.navlinks a:hover {
+  color: #ffa703;
+}
+/* call_to_action button */
+.cta-button {
+  background: transparent;
+  border: 1px solid #ffff;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.cta-button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: rgb(48, 21, 146);
+}
+/* hamburger (mobile */
+.hanburger {
+  display: none;
+  top: 1rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+.item {
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hanburger:active .item1 {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.hanburger:active .item2 {
+  opacity: 0;
+}
+.hanburger:active .item3 {
+  transform: rotate(-45deg) translate(5px, -8px);
+}
+/* slide.in nav on mobile */
+.mobile-nav {
+  position: fixed;
+  top: 5;
+  right: -200%;
+  width: 90%;
+  height: 200px;
+  background: #1f1b2e;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem 2rem;
+  gap: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+.mobile-nav.open {
+  text-align: center;
+  right: 0;
+}
+.mobile-nav a {
+  color: #fff;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+/* overlay behind mobile nav */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mobile-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+/* hero content */
+.Header-Content {
+  text-align: center;
+  padding: 4rem 1 rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.Header-Content h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  margin-top: 1rem;
+  text-shadow: 2px 3px 0px black;
+}
+.Header-Content p {
+  font-size: 1.125rem;
+  margin-bottom: 4rem;
+  text-shadow: 2px 1px 0px black;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.mywork,
+.connect {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mywork {
+  background-color: transparent;
+  border: 1px solid #ffff;
+}
+.mywork:hover,
+.connect:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: rgb(48, 21, 146);
+}
+.connect a:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: rgb(48, 21, 146);
+}
+.connect {
+  background-color: rgb(58, 39, 128);
+  color: #fff;
+  border: none;
+}
+.collaborate {
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 80px;
+}
+.brand-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+.brand-logo img {
+  width: 50px;
+  height: 50px;
+}
+.brand-logo p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  text-shadow: 2px 2px 0px black;
+}
+
+/* large screen Adjestments */
+@media (min-width: 768px) {
+  .hanburger {
+    display: none;
+  }
+  .navlinks {
+    display: flex;
+  }
+  .cta-button {
+    display: block;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .mobile-overlay {
+    display: none;
+  }
+
+  .Header-head {
+    padding: 1.5rem 2.5rem 2rem;
+  }
+  .Header-Content {
+    padding: 3rem 2rem 2rem;
+  }
+  .Header-Content h1 {
+    font-size: 4rem;
+  }
+  .Header-Content p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .hanburger {
+    display: flex;
+  }
+  .navlinks {
+    display: none;
+  }
+  .cta-button {
+    display: none;
+  }
+}
