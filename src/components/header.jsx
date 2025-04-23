@@ -4,10 +4,6 @@ import "/src/styling/style.css";
 import logo from "/Elite.svg";
 import bgimage from "/src/assets/background.jpg";
 import FreakyPlus from "/src/assets/logo.svg";
-import { Link } from "react-router-dom";
-import About from "./about";
-import Service from "./services";
-import Footer from "./footer";
 // import lear from "/src/assets/elitedev.jpg";
 
 export default function Header() {
@@ -36,7 +32,9 @@ export default function Header() {
             <a href="#testimonials">Testimonials</a>
           </nav>
           {/* Cta Button */}
-          <button className="cta-button">Lets Connect</button>
+          <a href="t.me/Elite_Dev_0" target="_blank">
+            <button className="cta-button">Lets Connect</button>
+          </a>
           {/* Hamburger (mobile) */}
           <div
             className={`hanburger ${isOpen ? "active" : ""} `}

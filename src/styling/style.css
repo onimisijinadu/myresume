@@ -70,10 +70,18 @@
   background: transparent;
   border: 1px solid #ffff;
   padding: 0.75rem 1rem;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
+}
+.Header-head a {
+  text-decoration: none;
+}
+.cta-button a:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: rgb(48, 21, 146);
 }
 .cta-button:hover {
   background-color: hsl(0, 0%, 100%);

@@ -25,6 +25,7 @@ export default function Service() {
         </div>
         <img src={Frontend} alt="Front Development" className="frontend" />
       </div>
+      <hr />
     </div>
   );
 }

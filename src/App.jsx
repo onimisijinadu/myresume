@@ -6,6 +6,7 @@ import About from "./components/about";
 import Service from "./components/services";
 import Footer from "./components/footer";
 import Backtotop from "./components/backtotop";
+import Testimonial from "./components/testiomnials";
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
       <Header />
       <About />
       <Service />
+      <Testimonial />
       <Footer />
       <Backtotop />
+
       {/* Uncomment the following lines to enable routing */}
       {/* <Routes>
         <Route path="/" element={<Header />} />
