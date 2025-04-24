@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://onimisijinadu.github.io/Resume/",
+  "homepage": "https://onimisijinadu.github.io/myresume/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
