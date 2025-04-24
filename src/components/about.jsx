@@ -20,7 +20,7 @@ export default function About() {
             <a href="https://discordapp.com/users/lebuy./" target="_blank">
               <FaDiscord />
             </a>
-            <a href="t.me/Elite_Dev_0" target="_blank">
+            <a href="https://t.me/Elite_Dev_0" target="_blank">
               <FaTelegram />
             </a>
           </div>
