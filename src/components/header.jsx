@@ -32,7 +32,7 @@ export default function Header() {
             <a href="#testimonials">Testimonials</a>
           </nav>
           {/* Cta Button */}
-          <a href="t.me/Elite_Dev_0" target="_blank">
+          <a href="https://t.me/Elite_Dev_0" target="_blank">
             <button className="cta-button">Lets Connect</button>
           </a>
           {/* Hamburger (mobile) */}
@@ -74,7 +74,7 @@ export default function Header() {
             development services by EliteDev freelancer for your website needs
           </p>
           <div className="hero-cta">
-            <a href="t.me/Elite_Dev_0" target="_blank">
+            <a href="https://t.me/Elite_Dev_0" target="_blank">
               <button className="connect">Let's Connect</button>
             </a>
 
