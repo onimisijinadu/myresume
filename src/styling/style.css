@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   /* let content dictate height, but ensure at least full viewport */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: url("scr/assests/background.jpg") center/cover no-repeat;
   color: #fff;
   overflow: hidden;
